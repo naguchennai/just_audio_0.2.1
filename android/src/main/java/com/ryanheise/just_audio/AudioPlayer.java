@@ -377,7 +377,7 @@ public class AudioPlayer implements MethodCallHandler, Player.EventListener, Met
 		abortExistingConnection();
 		prepareResult = result;
 		transition(PlaybackState.connecting);
-		String userAgent = Util.getUserAgent(context, "just_audio");
+		String userAgent = Util.getUserAgent(context, "xxx");
 		DataSource.Factory httpDataSourceFactory = new DefaultHttpDataSourceFactory(
 				userAgent,
 				DefaultHttpDataSource.DEFAULT_CONNECT_TIMEOUT_MILLIS,
