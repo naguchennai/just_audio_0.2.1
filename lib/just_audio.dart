@@ -267,12 +267,6 @@ class AudioPlayer {
   /// https://somewhere.com/somestream?x=etc#.m3u8
   Future<Duration> setUrl(String url, {Map<String, String> headers}) async {
     try {
-      
-      if (_proxy == null) {
-          _proxy = _ProxyHttpServer();
-          await _proxy.stop();
-        }
-      
       if (!kIsWeb && headers != null) {
         if (_proxy == null) {
           _proxy = _ProxyHttpServer();
