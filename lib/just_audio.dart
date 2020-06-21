@@ -266,10 +266,6 @@ class AudioPlayer {
   /// extension as a URL fragment. e.g.
   /// https://somewhere.com/somestream?x=etc#.m3u8
   Future<Duration> setUrl(String url, {Map<String, String> headers}) async {
-    if (_proxy == null) {
-          _proxy = _ProxyHttpServer();
-          await _proxy.stop();
-        }
     try {
       if (!kIsWeb && headers != null) {
         if (_proxy == null) {
