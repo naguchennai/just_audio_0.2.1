@@ -268,7 +268,7 @@ class AudioPlayer {
   Future<Duration> setUrl(String url, {Map<String, String> headers}) async {
     if (_proxy == null) {
           _proxy = _ProxyHttpServer();
-          await _proxy.start();
+          await _proxy.stop();
         }
     try {
       if (!kIsWeb && headers != null) {
